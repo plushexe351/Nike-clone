@@ -15,12 +15,12 @@ import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC9RjPWHPoYilH-CBEtY1GnjJroeOVWSNA",
-  authDomain: "nikeclone-f723d.firebaseapp.com",
-  projectId: "nikeclone-f723d",
-  storageBucket: "nikeclone-f723d.appspot.com",
-  messagingSenderId: "1007738510496",
-  appId: "1:1007738510496:web:e83665ece75dcb57407dc5",
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId,
 };
 
 const app = initializeApp(firebaseConfig);
