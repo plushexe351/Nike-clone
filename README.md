@@ -1,71 +1,75 @@
-# Getting Started with Create React App
+# E-commerce App (Nike Clone)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a clone of the Nike website, designed to provide users with a seamless shopping experience. The app is built using React for the frontend and Firebase for the backend. It is fully responsive and allows users to browse products, manage their cart, and place orders. Additionally, the app includes an admin panel for managing product listings.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+### User Authentication
 
-### `npm start`
+- **Google Authentication**: Users can sign in with their Google account.
+- **Checkout Authentication**: Only authenticated users can proceed to checkout.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Product Management
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Admin Panel**: Admins can log in using a basic username and password to manage product listings.
+- **Product Listing**: Products added via the admin panel are dynamically displayed on the website.
 
-### `npm test`
+### Shopping Cart
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Add to Cart**: Users can add products to their shopping cart.
+- **Edit Quantity**: Users can change the quantity of items in their cart.
+- **Delete Items**: Users can remove items from their cart.
+- **Checkout**: Authenticated users can complete their purchase by providing their address and pincode.
+- **Order History**: Users can view their past orders in their profile.
 
-### `npm run build`
+### Favorites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Add to Favorites**: Users can mark products as favorites.
+- **Favorites Section**: (To-Do) Implement the feature to view all favorited items in a dedicated section.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technology Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Frontend**: React
+- **Backend**: Firebase (Database & Authentication)
+- **Authentication**: Google Sign-In, Basic Authentication for Admin Panel
+- **Responsive Design**: Optimized for mobile and desktop devices.
 
-### `npm run eject`
+## Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Prerequisites
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Node.js and npm installed.
+- A Firebase project with Firestore and Google Authentication enabled.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Steps
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/plushexe351/Nike-clone.git
+   ```
 
-## Learn More
+````
+2. Install Dependencies:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+cd Nike-clone
+npm install
+````
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. Set up Firebase:
+   -Create a Firebase project.
+   -Enable Firestore and Google Authentication.
+   -Update the Firebase configuration in your project with your credentials.
 
-### Code Splitting
+4. Admin Panel Access
+   To access the admin panel:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+-Navigate to /admin.
+-Log in with the provided username and password.
 
-### Analyzing the Bundle Size
+## To-Do List
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# Nike-clone
+-Favorites Section: Add a section to view all favorited products.
+-Enhanced Order Details: Provide more detailed order information in the user profile.
+-Admin Panel Enhancements: Implement additional features like bulk product uploads and analytics.
+-Payment Integration: Integrate a payment gateway for processing orders.
