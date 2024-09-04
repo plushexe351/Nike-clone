@@ -44,17 +44,17 @@ This project is a clone of the Nike website, designed to provide users with a se
 ### Steps
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/plushexe351/Nike-clone.git
    ```
 
-````
 2. Install Dependencies:
 
 ```bash
 cd Nike-clone
 npm install
-````
+```
 
 3. Set up Firebase:
    -Create a Firebase project.
