@@ -1,0 +1,132 @@
+.Orders {
+  header#heading {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    .title {
+      font-size: 1.5rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+  }
+  #summary {
+    gap: 1rem !important;
+    font-weight: 300;
+    > div {
+      width: 100%;
+      display: flex;
+      gap: 3rem;
+      justify-content: space-between;
+      align-items: center;
+      p:last-of-type {
+        min-width: max-content;
+      }
+      &.total {
+        margin-top: 1rem;
+        border-bottom: 1px solid #e2e2e2;
+        border-top: 1px solid #e2e2e2;
+        padding-block: 1.5rem;
+        p:last-of-type {
+          font-weight: 400;
+        }
+      }
+      &.btn--checkout {
+        margin-top: 1rem;
+        padding: 1.3rem;
+        width: 100%;
+        background-color: black;
+        color: white;
+        border-radius: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+  main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .order-status {
+    background-color: #f1f1f1;
+    border-radius: 3rem;
+    padding: 0.7rem 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    .icon {
+      width: 1rem;
+      fill: rgb(57, 255, 57);
+      color: transparent;
+    }
+  }
+  .order-details {
+    padding: 0.7rem 2rem;
+    background-color: #f1f1f1;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 300;
+    .actions {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      .cancel-order {
+        background-color: black;
+        border-radius: 3rem;
+        padding: 0.7rem 1rem;
+        color: white;
+        cursor: pointer;
+      }
+    }
+    p:first-of-type {
+      font-weight: normal;
+    }
+    p:last-of-type {
+      margin-left: auto;
+    }
+  }
+  .product-view {
+    width: 95vw;
+    border-bottom: 1px solid lightgray;
+  }
+  .product-details-and-actions {
+    .title {
+      color: black;
+    }
+    color: #757575;
+  }
+  .quantity {
+    margin-top: 1rem;
+    select {
+      border: none;
+      outline: none;
+      text-indent: 0.5rem;
+      font-size: 1rem;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .view-image {
+    img {
+      height: 200px !important;
+      width: 200px !important;
+    }
+  }
+}

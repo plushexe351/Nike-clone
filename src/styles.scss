@@ -1,0 +1,212 @@
+@mixin smallDevice {
+  @media screen and (max-width: 900px) {
+    @content;
+  }
+}
+@mixin smallerDevice {
+  @media screen and (max-width: 550px) {
+    @content;
+  }
+}
+@mixin mediumDevice {
+  @media screen and (max-width: 750px) {
+    @content;
+  }
+}
+
+@mixin hideInnerNav {
+  @media screen and (max-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin smallestDevice {
+  @media screen and (max-width: 380px) {
+    @content;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: white;
+}
+
+.top-bar {
+  background-color: #f5f5f5;
+  padding: 0.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  .options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    .option {
+      font-size: 0.8rem;
+      cursor: pointer;
+      .link {
+        text-decoration: none;
+        color: black;
+      }
+      &:not(:last-of-type) {
+        padding-right: 0.5rem;
+        border-right: 1px solid rgb(18, 18, 18);
+      }
+      &.profile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+      }
+    }
+  }
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.203);
+  > * {
+    flex: 1;
+  }
+  .cart {
+    position: relative;
+  }
+  .cart-qty {
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    background-color: black;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    display: grid;
+    color: white;
+    font-size: 0.7rem;
+    place-content: center;
+  }
+  .categories-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    > * {
+      position: relative;
+      width: max-content;
+      cursor: pointer;
+      padding-block: 0.5rem;
+      &:hover::before {
+        content: "";
+        bottom: 0em;
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background-color: rgb(0, 0, 0);
+      }
+    }
+    @include mediumDevice {
+      display: none;
+    }
+  }
+  .other {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    .icon {
+      width: 1.5rem;
+      cursor: pointer;
+    }
+    .search-container {
+      border-radius: 3rem;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      padding-inline: 0.5rem;
+      width: 150px;
+      background-color: #f5f5f5;
+      #logo--search {
+        min-width: 1.5rem;
+        color: rgb(15, 15, 15);
+      }
+      input {
+        background-color: transparent;
+        border: none;
+        padding: 0.5rem;
+        width: 100%;
+        outline: none;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+.offers {
+  padding: 1rem;
+  background-color: #f5f5f5;
+  text-align: center;
+  line-height: 1.5;
+  p {
+    color: rgb(61, 61, 61);
+  }
+  a {
+    color: black;
+    font-size: 0.7rem;
+  }
+}
+#footer {
+  border-top: 1px solid rgb(208, 208, 208);
+  height: max-content;
+  background-color: white;
+  width: 100%;
+  header {
+    padding: 2rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+
+    border-bottom: 1px solid rgb(242, 242, 242);
+    // background-color: white;
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+    }
+    i {
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    p {
+      text-decoration: none;
+    }
+  }
+  .footer-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    img {
+      width: 70px;
+    }
+  }
+}
